@@ -5,5 +5,6 @@ services:
     container_name: mysql_compose
     ports:
       - '3306:3306'
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
+    env_file: env_file.txt
+    volumes:
+      - '/mnt/mysql:/var/lib/mysql'
