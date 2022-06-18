@@ -7,4 +7,6 @@ services:
       - '3306:3306'
     env_file: env_file.txt
     volumes:
-      - '/mnt/mysql:/var/lib/mysql'
+      - 'mysql_vl:/var/lib/mysql'
+volumes:
+  mysql_vl:
